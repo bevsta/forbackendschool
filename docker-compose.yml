@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  items_web:
+    build: .
+    command: python /usr/src/forbackendschool/manage.py runserver 0.0.0.0:80
+    volumes:
+      - .:/usr/src/forbackendschool
+    ports:
+      - "80:80"
+#    depends_on:
+#      - db
